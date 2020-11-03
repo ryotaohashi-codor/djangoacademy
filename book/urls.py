@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
+from .views import detailview, redirectedview
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('detail/<int:pk>', detailview),
+    path('redirected/<int:pk>', redirectedview)
 ]
