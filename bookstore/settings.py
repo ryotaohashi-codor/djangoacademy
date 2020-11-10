@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'book.apps.BookConfig',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AWS_ACCESS_KEY_ID = 'AKIAWDVXVTE5RCZMLWZZ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'nexter66'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
